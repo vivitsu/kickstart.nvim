@@ -267,6 +267,11 @@ require('lazy').setup({
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
   { 'NMAC427/guess-indent.nvim', opts = {} },
 
+  { -- Ghostty config syntax highlighting
+    'bezhermoso/tree-sitter-ghostty',
+    build = 'make nvim_install',
+  },
+
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {
