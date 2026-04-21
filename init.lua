@@ -113,11 +113,8 @@ vim.o.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false
 
--- Set indentation to 4 spaces for all files
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+-- Indentation is handled by `guess-indent.nvim` (detects per-buffer from
+-- existing content). Neovim's built-in defaults apply to brand-new buffers.
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
