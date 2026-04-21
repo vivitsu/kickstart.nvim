@@ -671,7 +671,10 @@ require('lazy').setup({
         -- You can add other tools here that you want Mason to install
       })
 
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      require('mason-tool-installer').setup {
+        ensure_installed = ensure_installed,
+        auto_update = true, -- Upgrade Mason-managed tools to latest versions on startup
+      }
 
       for name, server in pairs(servers) do
         vim.lsp.config(name, server)
